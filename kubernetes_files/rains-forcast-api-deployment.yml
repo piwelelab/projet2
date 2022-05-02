@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: rains-forcast-api-deployment
+  labels:
+    app: rains-forcast-api
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: rains-forcast-api
+  template:
+    metadata:
+      labels:
+        app: rains-forcast-api
+    spec:
+      containers:
+      - name: rains-forcast-api-container
+        image: 554477/rains-forcast-api-image:latest
+        ports:
+        - containerPort: 8000

@@ -1,0 +1,41 @@
+
+			Mon May  2 13:01:04 UTC 2022
+
+			AUTHENTIFICATION TEST
+
+============================= test session starts ==============================
+platform linux -- Python 3.9.2, pytest-7.1.2, pluggy-1.0.0
+rootdir: /
+collected 3 items
+
+test_authentification.py 
+============================= END ==============================================
+
+
+
+			PREDICTION TEST
+
+============================= test session starts ==============================
+platform linux -- Python 3.8.10, pytest-7.1.2, pluggy-1.0.0
+rootdir: /
+collected 2 items
+
+test_model_prediction.py 
+============================= END ==============================================
+
+
+
+			PERFORMANCE TEST
+
+============================= test session starts ==============================
+platform linux -- Python 3.8.10, pytest-7.1.2, pluggy-1.0.0
+rootdir: /
+collected 1 item
+
+test_model_performance.py .                                              [100%]
+
+============================== 1 passed in 5.53s ===============================
+
+============================= END ==============================================
+
+

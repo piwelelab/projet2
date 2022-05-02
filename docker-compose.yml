@@ -1,0 +1,35 @@
+version: "3.9"
+services:
+  rains-forcast-api:
+    image: 554477/rains-forcast-api-image:latest
+    container_name: rains-forcast-api
+    networks:
+      - rains_forcast_network
+    ports:
+      - "8000:8000"
+
+  test_authentification:
+    image: 554477/rains_test_authentification_image:latest
+    container_name: rains_test_authentification_container
+    networks:
+      - rains_forcast_network
+    volumes:
+      - $HOME/rains_logs/:/rains_logs/
+
+  test_predict:
+    image: 554477/rains_test_prediction_image:latest
+    container_name: rains_test_prediction_container
+    networks:
+      - rains_forcast_network
+    volumes:
+      - $HOME/rains_logs/:/rains_logs/
+
+  test_performance:
+    image: 554477/rains_test_performance_image:latest
+    container_name: rains_test_performance_container
+    networks:
+      - rains_forcast_network
+    volumes:
+      - $HOME/rains_logs/:/rains_logs/
+networks:
+  rains_forcast_network:

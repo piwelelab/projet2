@@ -1,0 +1,10 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: rains-forcast-api-ingress
+spec:
+  defaultBackend:
+    service:
+      name: rains-forcast-api-service
+      port:
+        number: 8000
